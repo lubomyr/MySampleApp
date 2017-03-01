@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/simple_activity"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/simple_activity" />
+        <item
+            android:id="@+id/simple_fragment"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/simple_fragment" />
+        <item
+            android:id="@+id/activity_tab_pager"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/activity_tab_pager" />
+        <item
+            android:id="@+id/activity_with_search"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/activity_with_search" />
+        <item
+            android:id="@+id/fragment_with_dialog"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/fragment_with_dialog" />
+        <item
+            android:id="@+id/fragment_with_bottom_sheets"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/fragment_with_bottom_sheets" />
+        <item
+            android:id="@+id/fragment_with_retrofit"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/fragment_with_retrofit" />
+        <item
+            android:id="@+id/fragment_with_listview"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/fragment_with_listview" />
+        <item
+            android:id="@+id/fragment_with_recyclerview"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/fragment_with_recycleview" />
+        <item
+            android:id="@+id/fragment_with_expandableview"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/fragment_with_expandableview" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
