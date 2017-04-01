@@ -15,7 +15,7 @@ import com.sample.app.repository.CustomerRepository;
 
 import java.util.List;
 
-public class FragmentWithViewHolder  extends Fragment {
+public class FragmentWithViewHolder extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

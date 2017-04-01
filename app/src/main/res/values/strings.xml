@@ -30,5 +30,7 @@
     <string name="time">Time</string>
     <string name="enter_valid_email">Enter valid e-mail</string>
     <string name="select_date">Select date</string>
+    <string name="activity_with_data_binding">Activity with data binding</string>
+    <string name="fragment_with_viewpager">Fragment with viewpager</string>
 
 </resources>

@@ -15,6 +15,6 @@ public class DataBindingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_with_data_binding);
 
-        binding.myTextView.setText("Activity with data binding");
+        binding.myTextView.setText(R.string.activity_with_data_binding);
     }
 }

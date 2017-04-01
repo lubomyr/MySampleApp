@@ -26,6 +26,7 @@ import com.sample.app.fragment_with_expandableview.FragmentWithExpandableView;
 import com.sample.app.fragment_with_listview.FragmentWithListView;
 import com.sample.app.fragment_with_retrofit.FragmentWithRetrofit;
 import com.sample.app.fragment_with_viewholder.FragmentWithViewHolder;
+import com.sample.app.fragment_with_viewpager.FragmentWithViewPager;
 import com.sample.app.simple_activity.SimpleActivity;
 import com.sample.app.simple_fragment.SimpleFragment;
 
@@ -130,6 +131,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.fragment_with_expandableview:
                 addFragment(new FragmentWithExpandableView(), true);
+                break;
+            case R.id.fragment_with_viewpager:
+                addFragment(new FragmentWithViewPager(), true);
                 break;
         }
 
