@@ -3,7 +3,6 @@ package com.sample.app.fragment_with_listview;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -15,9 +14,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.sample.app.R;
-import com.sample.app.db.repository.CustomerRepository;
 import com.sample.app.entity.Customer;
 import com.sample.app.fragment_with_listview.adapters.ListAdapter;
+import com.sample.app.repository.CustomerRepository;
 
 import java.util.List;
 
@@ -29,7 +28,7 @@ public class FragmentWithListView extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView      = inflater.inflate(R.layout.fragment_with_listview, container, false);
-        customerList = CustomerRepository.getAll(getContext());
+        customerList = CustomerRepository.getAll();
         ListAdapter adapter = new ListAdapter(getActivity(), R.layout.cust_customer_list,
                 customerList);
         ListView listView = (ListView) rootView.findViewById(R.id.listView);

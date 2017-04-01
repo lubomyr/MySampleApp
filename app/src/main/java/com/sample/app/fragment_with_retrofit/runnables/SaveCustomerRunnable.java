@@ -2,8 +2,8 @@ package com.sample.app.fragment_with_retrofit.runnables;
 
 import android.content.Context;
 
-import com.sample.app.db.repository.CustomerRepository;
 import com.sample.app.entity.Customer;
+import com.sample.app.repository.CustomerRepository;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -20,7 +20,7 @@ public class SaveCustomerRunnable implements Runnable {
     @Override
     public void run() {
         if(context.get() != null) {
-            CustomerRepository.saveAll(context.get(), customerList);
+            CustomerRepository.saveAll(customerList);
         }
     }
 }

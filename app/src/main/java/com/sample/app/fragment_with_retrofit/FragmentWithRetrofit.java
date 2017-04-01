@@ -8,15 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.gson.JsonElement;
+import com.google.gson.reflect.TypeToken;
 import com.sample.app.R;
 import com.sample.app.api.RetrofitUtil;
 import com.sample.app.api.customer.CustomerAPI;
-import com.sample.app.db.repository.CustomerRepository;
 import com.sample.app.entity.Customer;
 import com.sample.app.fragment_with_retrofit.runnables.SaveCustomerRunnable;
+import com.sample.app.repository.CustomerRepository;
 import com.sample.app.utils.GsonUtils;
-import com.google.gson.JsonElement;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.List;
 
@@ -34,9 +34,9 @@ public class FragmentWithRetrofit extends Fragment {
         Retrofit retrofit = RetrofitUtil.getSimpleRetrofit();
         CustomerAPI customerAPI = retrofit.create(CustomerAPI.class);
 
-        //Call<JsonElement> call = customerAPI.getCustomers1();
-        Call<List<Customer>> call = customerAPI.getCustomers2();
-        call.enqueue(custCallback);
+        Call<JsonElement> call = customerAPI.getCustomers1();
+        //Call<List<Customer>> call = customerAPI.getCustomers2();
+        call.enqueue(jsonCallback);
     }
 
     @Override
@@ -90,6 +90,6 @@ public class FragmentWithRetrofit extends Fragment {
     }
 
     private void getCustomerfromDB() {
-        List<Customer> customerList = CustomerRepository.getAll(getContext());
+        List<Customer> customerList = CustomerRepository.getAll();
     }
 }

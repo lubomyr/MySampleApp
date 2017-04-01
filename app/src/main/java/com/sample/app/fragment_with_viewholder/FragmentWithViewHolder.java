@@ -9,10 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.sample.app.R;
-import com.sample.app.db.repository.CustomerRepository;
 import com.sample.app.entity.Customer;
-import com.sample.app.fragment_with_viewholder.adapters.ViewHolderAdapter;
 import com.sample.app.fragment_with_viewholder.adapters.ViewHolderClickAdapter;
+import com.sample.app.repository.CustomerRepository;
 
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class FragmentWithViewHolder  extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView      = inflater.inflate(R.layout.fragment_with_viewholder, container, false);
-        List<Customer> customerList = CustomerRepository.getAll(getContext());
+        List<Customer> customerList = CustomerRepository.getAll();
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));

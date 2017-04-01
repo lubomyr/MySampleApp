@@ -1,6 +1,5 @@
-package com.sample.app.db.repository;
+package com.sample.app.repository;
 
-import android.content.Context;
 import android.util.Log;
 
 import com.sample.app.BaseApplication;
@@ -13,12 +12,12 @@ import java.util.concurrent.atomic.AtomicLong;
 public class CustomerRepository {
     private static AtomicLong sId = new AtomicLong();
 
-    private static CustomerDao getCustomerDao(Context context) {
-        return ((BaseApplication) context.getApplicationContext()).getDaoSession().getCustomerDao();
+    private static CustomerDao getDao() {
+        return BaseApplication.getDaoSession().getCustomerDao();
     }
 
-    public static void saveAll(Context context, List<Customer> itemList) {
-        CustomerDao dao = getCustomerDao(context);
+    public static void saveAll(List<Customer> itemList) {
+        CustomerDao dao = getDao();
 
         List<Customer> oldItemList;
         Customer old;
@@ -40,19 +39,20 @@ public class CustomerRepository {
     private static void insert(Customer item, CustomerDao dao) {
         try {
             dao.insert(item);
-        }catch (Throwable throwable) {
+        } catch (Throwable throwable) {
             Log.e("dao.insert(Customer)", throwable.toString());
             item.setId(sId.incrementAndGet());
             insert(item, dao);
         }
     }
 
-    public static List<Customer> search(Context context, String searchStr) {
-        return getCustomerDao(context).queryBuilder().where(
+    public static List<Customer> search(String searchStr) {
+        return getDao().queryBuilder().where(
                 CustomerDao.Properties.Name.like("%" + searchStr + "%")).list();
     }
 
-    public static List<Customer> getAll(Context context) {
-        return getCustomerDao(context).loadAll();
+    public static List<Customer> getAll() {
+        return getDao().loadAll();
     }
 }
+
