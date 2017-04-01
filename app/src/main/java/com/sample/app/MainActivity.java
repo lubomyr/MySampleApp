@@ -20,6 +20,7 @@ import android.view.View;
 import com.sample.app.activity_tab_pager.ActivityWithTabPager;
 import com.sample.app.activity_with_search.ActivityWithSearch;
 import com.sample.app.callback.OnAddFragmentListener;
+import com.sample.app.fragment_with_activity_result.FragmentWithActivityResult;
 import com.sample.app.fragment_with_bottom_sheets.FragmentWithBottomSheets;
 import com.sample.app.fragment_with_dialog.FragmentWithDialog;
 import com.sample.app.fragment_with_expandableview.FragmentWithExpandableView;
@@ -134,6 +135,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.fragment_with_viewpager:
                 addFragment(new FragmentWithViewPager(), true);
+                break;
+            case R.id.fragment_with_activityresult:
+                addFragment(new FragmentWithActivityResult(), true);
                 break;
         }
 

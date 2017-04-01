@@ -34,6 +34,8 @@
             android:name=".activity_tab_pager.ActivityWithTabPager">
         </activity>
 
+        <activity android:name=".fragment_with_activity_result.ActivityWithResult"></activity>
+
     </application>
 
 </manifest>

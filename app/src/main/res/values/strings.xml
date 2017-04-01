@@ -32,5 +32,10 @@
     <string name="select_date">Select date</string>
     <string name="activity_with_data_binding">Activity with data binding</string>
     <string name="fragment_with_viewpager">Fragment with viewpager</string>
+    <string name="waiting_for_result">waiting for result</string>
+    <string name="start_new_activity_for_result">Start new activity for result</string>
+    <string name="fragment_with_activityresult">Fragment with Activity Result</string>
+    <string name="enter_result_text">Enter result text</string>
+    <string name="finish_activity">finish activity</string>
 
 </resources>

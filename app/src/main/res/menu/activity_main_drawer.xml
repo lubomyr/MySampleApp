@@ -46,6 +46,10 @@
             android:id="@+id/fragment_with_viewpager"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/fragment_with_viewpager" />
+        <item
+            android:id="@+id/fragment_with_activityresult"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/fragment_with_activityresult" />
     </group>
 
     <item android:title="Communicate">
