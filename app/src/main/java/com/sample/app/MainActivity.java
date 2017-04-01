@@ -22,6 +22,7 @@ import com.sample.app.activity_with_search.ActivityWithSearch;
 import com.sample.app.callback.OnAddFragmentListener;
 import com.sample.app.fragment_with_activity_result.FragmentWithActivityResult;
 import com.sample.app.fragment_with_bottom_sheets.FragmentWithBottomSheets;
+import com.sample.app.fragment_with_capturing_photo.FragmentWithCapturingPhoto;
 import com.sample.app.fragment_with_dialog.FragmentWithDialog;
 import com.sample.app.fragment_with_expandableview.FragmentWithExpandableView;
 import com.sample.app.fragment_with_listview.FragmentWithListView;
@@ -138,6 +139,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.fragment_with_activityresult:
                 addFragment(new FragmentWithActivityResult(), true);
+                break;
+            case R.id.fragment_with_capturing_photo:
+                addFragment(new FragmentWithCapturingPhoto(), true);
                 break;
         }
 

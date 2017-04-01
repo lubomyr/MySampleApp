@@ -50,6 +50,10 @@
             android:id="@+id/fragment_with_activityresult"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/fragment_with_activityresult" />
+        <item
+            android:id="@+id/fragment_with_capturing_photo"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/fragment_with_capturing_photo" />
     </group>
 
     <item android:title="Communicate">
