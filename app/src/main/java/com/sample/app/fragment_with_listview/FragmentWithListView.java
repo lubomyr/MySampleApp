@@ -29,7 +29,7 @@ public class FragmentWithListView extends Fragment {
 
         View rootView      = inflater.inflate(R.layout.fragment_with_listview, container, false);
         customerList = CustomerRepository.getAll();
-        ListAdapter adapter = new ListAdapter(getActivity(), R.layout.cust_customer_list,
+        ListAdapter adapter = new ListAdapter(getActivity(), R.layout.item_customer,
                 customerList);
         ListView listView = (ListView) rootView.findViewById(R.id.listView);
         listView.setAdapter(adapter);
