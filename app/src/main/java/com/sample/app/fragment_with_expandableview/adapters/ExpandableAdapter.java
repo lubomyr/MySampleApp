@@ -1,7 +1,6 @@
 package com.sample.app.fragment_with_expandableview.adapters;
 
 import android.content.Context;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +39,7 @@ public class ExpandableAdapter extends BaseExpandableListAdapter {
         Customer item = (Customer) getChild(groupPosition, childPosition);
         if (view == null) {
             LayoutInflater infalInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = infalInflater.inflate(R.layout.cust_customer_list, null);
+            view = infalInflater.inflate(R.layout.item_customer, null);
         }
 
         TextView nameView = (TextView) view.findViewById(R.id.nameTextView);

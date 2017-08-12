@@ -41,7 +41,7 @@ public class CustomerPagerAdapter extends PagerAdapter {
         Customer item = CustomerList.get(position);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.cust_customer_list, container, false);
+        View view = inflater.inflate(R.layout.item_customer, container, false);
         container.addView(view);
 
         nameTextView = (TextView) view.findViewById(R.id.nameTextView);
