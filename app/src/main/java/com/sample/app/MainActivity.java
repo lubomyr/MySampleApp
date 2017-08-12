@@ -27,8 +27,8 @@ import com.sample.app.fragment_with_capturing_photo.FragmentWithCapturingPhoto;
 import com.sample.app.fragment_with_dialog.FragmentWithDialog;
 import com.sample.app.fragment_with_expandableview.FragmentWithExpandableView;
 import com.sample.app.fragment_with_listview.FragmentWithListView;
+import com.sample.app.fragment_with_recyclerview.FragmentWithRecyclerView;
 import com.sample.app.fragment_with_retrofit.FragmentWithRetrofit;
-import com.sample.app.fragment_with_viewholder.FragmentWithViewHolder;
 import com.sample.app.fragment_with_viewpager.FragmentWithViewPager;
 import com.sample.app.simple_activity.SimpleActivity;
 import com.sample.app.simple_fragment.SimpleFragment;
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity
                 addFragment(new FragmentWithListView(), true);
                 break;
             case R.id.fragment_with_recyclerview:
-                addFragment(new FragmentWithViewHolder(), true);
+                addFragment(new FragmentWithRecyclerView(), true);
                 break;
             case R.id.fragment_with_expandableview:
                 addFragment(new FragmentWithExpandableView(), true);

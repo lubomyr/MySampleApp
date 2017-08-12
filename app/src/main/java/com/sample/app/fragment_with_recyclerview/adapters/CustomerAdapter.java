@@ -1,4 +1,4 @@
-package com.sample.app.fragment_with_viewholder.adapters;
+package com.sample.app.fragment_with_recyclerview.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,8 +11,7 @@ import com.sample.app.entity.Customer;
 
 import java.util.List;
 
-public class ViewHolderClickAdapter extends RecyclerView.Adapter<ViewHolderClickAdapter.ViewHolder> {
-
+public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHolder> {
     private List<Customer> itemList;
     private OnItemClickListener  mOnItemClickListener;
 
@@ -54,10 +53,10 @@ public class ViewHolderClickAdapter extends RecyclerView.Adapter<ViewHolderClick
         private TextView nameTextView;
         private TextView cityTextView;
         private TextView countryTextView;
-        private ViewHolderClickAdapter.OnItemClickListener mOnItemClickListener;
+        private CustomerAdapter.OnItemClickListener mOnItemClickListener;
         private Customer item;
 
-        public ViewHolder(View itemView, ViewHolderClickAdapter.OnItemClickListener onItemClickListener) {
+        public ViewHolder(View itemView, CustomerAdapter.OnItemClickListener onItemClickListener) {
             super(itemView);
             mOnItemClickListener = onItemClickListener;
             itemView.findViewById(R.id.item).setOnClickListener(ViewHolder.this);
