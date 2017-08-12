@@ -19,6 +19,10 @@
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/activity_with_search" />
         <item
+            android:id="@+id/activity_with_fragments"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/activity_with_fragments" />
+        <item
             android:id="@+id/fragment_with_dialog"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/fragment_with_dialog" />

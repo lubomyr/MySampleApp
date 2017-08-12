@@ -36,6 +36,8 @@
 
         <activity android:name=".fragment_with_activity_result.ActivityWithResult"></activity>
 
+        <activity android:name=".activity_with_fragments.ActivityWithFragments"></activity>
+
     </application>
 
 </manifest>

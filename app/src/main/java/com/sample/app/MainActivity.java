@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.sample.app.activity_tab_pager.ActivityWithTabPager;
+import com.sample.app.activity_with_fragments.ActivityWithFragments;
 import com.sample.app.activity_with_search.ActivityWithSearch;
 import com.sample.app.callback.OnAddFragmentListener;
 import com.sample.app.fragment_with_activity_result.FragmentWithActivityResult;
@@ -115,6 +116,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.activity_tab_pager:
                 Intent intent3 = new Intent(this, ActivityWithTabPager.class);
                 startActivity(intent3);
+                break;
+            case R.id.activity_with_fragments:
+                Intent intent4 = new Intent(this, ActivityWithFragments.class);
+                startActivity(intent4);
                 break;
             case R.id.fragment_with_bottom_sheets:
                 addFragment(new FragmentWithBottomSheets(), true);

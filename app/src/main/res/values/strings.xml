@@ -40,5 +40,6 @@
     <string name="select_for_gallery">Select for gallery</string>
     <string name="capture_from_camera">Capture from camera</string>
     <string name="fragment_with_capturing_photo">Fragment with capturing photo</string>
+    <string name="activity_with_fragments">Activity with Fragments</string>
 
 </resources>
