@@ -12,13 +12,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.sample.app.R;
+import com.sample.app.activity_tab_pager.adapter.TabPagerAdapter;
 import com.sample.app.activity_tab_pager.fragments.Tab1Fragment;
 import com.sample.app.activity_tab_pager.fragments.Tab2Fragment;
 import com.sample.app.activity_tab_pager.fragments.Tab3Fragment;
-import com.sample.app.adapters.ViewPagerAdapter;
 
 public class ActivityWithTabPager extends AppCompatActivity {
-    private ViewPager        mViewPager;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +65,13 @@ public class ActivityWithTabPager extends AppCompatActivity {
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        TabPagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager());
 
-        Tab1Fragment tab1Fragment =  new Tab1Fragment();
+        Tab1Fragment tab1Fragment = new Tab1Fragment();
         adapter.addFragment(tab1Fragment, "Tab1");
-        Tab2Fragment tab2Fragment =  new Tab2Fragment();
+        Tab2Fragment tab2Fragment = new Tab2Fragment();
         adapter.addFragment(tab2Fragment, "Tab2");
-        Tab3Fragment tab3Fragment =  new Tab3Fragment();
+        Tab3Fragment tab3Fragment = new Tab3Fragment();
         adapter.addFragment(tab3Fragment, "Tab3");
 
         viewPager.setAdapter(adapter);

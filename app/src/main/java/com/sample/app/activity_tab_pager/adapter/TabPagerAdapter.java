@@ -1,4 +1,4 @@
-package com.sample.app.adapters;
+package com.sample.app.activity_tab_pager.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,20 +8,20 @@ import android.support.v4.app.FragmentTransaction;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class TabPagerAdapter extends FragmentPagerAdapter {
 
-    private List<Fragment> mFragmentList      = new ArrayList<>();
-    private List<String>   mFragmentTitleList = new ArrayList<>();
-    private FragmentManager      mManager;
+    private List<Fragment> mFragmentList = new ArrayList<>();
+    private List<String> mFragmentTitleList = new ArrayList<>();
+    private FragmentManager mManager;
 
-    public ViewPagerAdapter(FragmentManager manager) {
+    public TabPagerAdapter(FragmentManager manager) {
         super(manager);
         mManager = manager;
     }
 
-    public ViewPagerAdapter(FragmentManager manager, List<Fragment> fragmentList) {
+    public TabPagerAdapter(FragmentManager manager, List<Fragment> fragmentList) {
         super(manager);
-        mManager      = manager;
+        mManager = manager;
         mFragmentList = fragmentList;
     }
 
