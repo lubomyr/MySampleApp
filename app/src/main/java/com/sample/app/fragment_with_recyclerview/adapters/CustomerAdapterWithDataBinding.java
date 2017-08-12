@@ -1,5 +1,6 @@
 package com.sample.app.fragment_with_recyclerview.adapters;
 
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,12 +16,19 @@ import java.util.List;
 public class CustomerAdapterWithDataBinding extends RecyclerView.Adapter<CustomerAdapterWithDataBinding.ViewHolder> {
     private List<Customer> itemList;
     private CustomerAdapterWithDataBinding.OnItemClickListener mOnItemClickListener;
+    private Context mContext;
+    private int mResources;
+
+    public CustomerAdapterWithDataBinding(Context context, int resources) {
+        this.mContext = context;
+        this.mResources = resources;
+    }
 
 
     @Override
     public CustomerAdapterWithDataBinding.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         ItemCustomerDatabindingBinding binding = DataBindingUtil.inflate(LayoutInflater.from(
-                parent.getContext()), R.layout.item_customer_databinding, parent, false);
+                parent.getContext()), mResources, parent, false);
 
         return new CustomerAdapterWithDataBinding.ViewHolder(binding, mOnItemClickListener);
     }

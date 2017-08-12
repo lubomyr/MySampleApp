@@ -1,5 +1,6 @@
 package com.sample.app.fragment_with_recyclerview.adapters;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,11 +15,17 @@ import java.util.List;
 public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.ViewHolder> {
     private List<Customer> itemList;
     private OnItemClickListener  mOnItemClickListener;
+    private Context mContext;
+    private int mResources;
 
+    public CustomerAdapter(Context context, int resources) {
+        this.mContext = context;
+        this.mResources = resources;
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.cust_customer_list, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(mResources, parent, false);
 
         return new ViewHolder(itemView, mOnItemClickListener);
     }

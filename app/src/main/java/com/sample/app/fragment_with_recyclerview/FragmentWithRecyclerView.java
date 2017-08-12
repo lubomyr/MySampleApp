@@ -25,7 +25,7 @@ public class FragmentWithRecyclerView extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
-        CustomerAdapter viewHolderAdapter = new CustomerAdapter();
+        CustomerAdapter viewHolderAdapter = new CustomerAdapter(getContext(), R.layout.cust_customer_list);
         viewHolderAdapter.setList(customerList);
         recyclerView.setAdapter(viewHolderAdapter);
 
